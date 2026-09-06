@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishnu M S — Infrastructure Engineer</title>
+<meta name="description" content="Vishnu M S — Infrastructure Engineer with 3+ years in NOC operations, Windows Server administration, and enterprise infrastructure monitoring.">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Vishnu M S — Infrastructure Engineer">
+<meta property="og:description" content="3+ years in NOC operations, Windows Server & AD administration, virtualization, and SLA-driven incident response.">
+<meta property="og:image" content="https://vishnumsundar.github.io/preview.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F1720'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2335C58F'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vishnu M S",
+  "jobTitle": "Infrastructure Engineer",
+  "email": "mailto:vishnumsundar5@gmail.com",
+  "telephone": "+91-7907654546",
+  "address": { "@type": "PostalAddress", "addressLocality": "Palakkad", "addressCountry": "IN" },
+  "sameAs": ["https://www.linkedin.com/in/vishnumsundar"],
+  "worksFor": { "@type": "Organization", "name": "Kaseya Software India Private Limited" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Calicut" }
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0F1720;
+    --panel: #141F29;
+    --panel-line: #263241;
+    --text: #E8EDF2;
+    --text-dim: #8CA0B3;
+    --text-faint: #56697C;
+    --ok: #35C58F;
+    --warn: #E8A33D;
+    --crit: #E15A5A;
+    --max-w: 780px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", -apple-system, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--ok); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--ok);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: "IBM Plex Mono", "SFMono-Regular", monospace; }
+
+  /* ---------- Status strip ---------- */
+  .statusbar { border-bottom: 1px solid var(--panel-line); background: #0C131A; }
+  .statusbar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 24px; font-size: 13px; color: var(--text-dim);
+    flex-wrap: wrap; gap: 8px;
+  }
+  .status-item { display: flex; align-items: center; gap: 7px; }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--ok);
+    box-shadow: 0 0 0 3px rgba(53, 197, 143, 0.15); flex-shrink: 0;
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(53, 197, 143, 0.15); }
+    50% { box-shadow: 0 0 0 6px rgba(53, 197, 143, 0.06); }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 60px 0 0; }
+
+  .hero-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 22px; margin-bottom: 4px; }
+  .avatar {
+    width: 84px; height: 84px; border-radius: 8px; object-fit: cover;
+    border: 1px solid var(--panel-line); flex-shrink: 0; background: var(--panel);
+  }
+  .hero-heading { padding-top: 2px; }
+
+  .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 6px; }
+  .hero .role { font-size: 19px; color: var(--ok); font-weight: 500; margin: 0; }
+  .hero p.summary { font-size: 16px; color: var(--text-dim); max-width: 64ch; margin: 22px 0 26px; }
+
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .chip {
+    font-size: 13px; color: var(--text); border: 1px solid var(--panel-line);
+    background: var(--panel); padding: 6px 12px; border-radius: 4px;
+  }
+
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+  .btn {
+    font-size: 14px; font-weight: 500; padding: 11px 20px; border-radius: 4px;
+    border: 1px solid transparent; display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary { background: var(--ok); color: #0C1712; }
+  .btn-primary:hover { background: #45D69B; text-decoration: none; }
+  .btn-secondary { border-color: var(--panel-line); color: var(--text); }
+  .btn-secondary:hover { border-color: var(--ok); color: var(--ok); text-decoration: none; }
+
+  .contact-row { display: flex; flex-wrap: wrap; gap: 6px 0; font-size: 14px; padding-bottom: 36px; }
+  .contact-row a, .contact-row span {
+    color: var(--text-dim); padding-right: 14px; margin-right: 14px; border-right: 1px solid var(--panel-line);
+  }
+  .contact-row a:last-child, .contact-row span:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .contact-row a { color: var(--text); }
+  .contact-row a:hover { color: var(--ok); }
+
+  /* ---------- Stat bar ---------- */
+  .statgrid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--panel-line); border-bottom: 1px solid var(--panel-line);
+  }
+  .stat { padding: 22px 16px; border-right: 1px solid var(--panel-line); text-align: center; }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: "IBM Plex Mono", monospace; font-size: 24px; font-weight: 500; color: var(--ok); }
+  .stat-label { font-size: 12px; color: var(--text-faint); margin-top: 4px; }
+  @media (max-width: 560px) {
+    .statgrid { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+  }
+
+  /* ---------- Section shell ---------- */
+  section { padding: 48px 0; border-bottom: 1px solid var(--panel-line); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 13px; color: var(--text-faint); margin: 0 0 24px; font-weight: 600;
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--panel-line); }
+
+  /* ---------- Highlights ---------- */
+  .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--panel-line); border: 1px solid var(--panel-line); }
+  .highlight { background: var(--bg); padding: 20px; }
+  .highlight-tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--warn);
+    border: 1px solid var(--warn); border-radius: 3px; padding: 1px 6px; display: inline-block; margin-bottom: 10px;
+  }
+  .highlight p { margin: 0; font-size: 14.5px; color: var(--text-dim); }
+  @media (max-width: 560px) { .highlight-grid { grid-template-columns: 1fr; } }
+
+  /* ---------- Skills ---------- */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--panel-line); }
+  .skill-row { display: contents; }
+  .skill-cat, .skill-val { padding: 13px 16px; border-bottom: 1px solid var(--panel-line); font-size: 14px; }
+  .skill-row:last-child .skill-cat, .skill-row:last-child .skill-val { border-bottom: none; }
+  .skill-cat {
+    color: var(--text-dim); font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+    border-right: 1px solid var(--panel-line); display: flex; align-items: center;
+  }
+  .skill-val { color: var(--text); }
+  @media (max-width: 560px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-cat { border-right: none; border-bottom: none; padding-bottom: 4px; }
+    .skill-val { padding-top: 0; }
+  }
+
+  /* ---------- Experience ---------- */
+  .job { position: relative; padding-left: 22px; margin-bottom: 34px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: ""; position: absolute; left: 0; top: 6px; width: 9px; height: 9px;
+    border-radius: 50%; background: var(--panel-line);
+  }
+  .job.current::before { background: var(--ok); box-shadow: 0 0 0 3px rgba(53, 197, 143, 0.18); }
+  .job::after {
+    content: ""; position: absolute; left: 4px; top: 18px; bottom: -34px; width: 1px; background: var(--panel-line);
+  }
+  .job:last-child::after { display: none; }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 3px; }
+  .job-title { font-size: 16px; font-weight: 600; }
+  .job-date { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--text-faint); white-space: nowrap; }
+  .job-org { color: var(--ok); font-size: 13.5px; margin-bottom: 10px; }
+  .job.current .job-org::after {
+    content: "active"; font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--ok);
+    border: 1px solid var(--ok); border-radius: 3px; padding: 1px 6px; margin-left: 9px; vertical-align: middle;
+  }
+  .job ul { margin: 0; padding-left: 18px; color: var(--text-dim); font-size: 14.5px; }
+  .job li { margin-bottom: 5px; }
+  .job li::marker { color: var(--text-faint); }
+
+  /* ---------- Tools tags ---------- */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--text-dim); border: 1px solid var(--panel-line); padding: 5px 10px; border-radius: 3px; }
+
+  /* ---------- Two column ---------- */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 560px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
+  .edu-item { margin-bottom: 16px; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-degree { font-size: 14.5px; font-weight: 500; }
+  .edu-school { font-size: 13.5px; color: var(--text-dim); }
+  .edu-date { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--text-faint); }
+  .cert-item { display: flex; align-items: center; gap: 8px; font-size: 14.5px; }
+  .cert-badge { font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--warn); border: 1px solid var(--warn); border-radius: 3px; padding: 1px 6px; }
+
+  /* ---------- Footer ---------- */
+  footer { padding: 40px 0 60px; text-align: center; }
+  footer .foot-note { font-size: 13px; color: var(--text-faint); margin-top: 18px; }
+  .cta-row.center { justify-content: center; }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #fff; color: #111; }
+    .statusbar, .cta-row, .dot { display: none; }
+    .hero, section { border: none; padding: 18px 0; }
+    a { color: #111; text-decoration: underline; }
+    .stat-num, .job-org, .hero .role { color: #111; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="statusbar">
+    <div class="wrap">
+      <div class="status-item"><span class="dot"></span> Available for opportunities</div>
+      <div class="status-item mono">Palakkad, India · IST</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-top">
+        <div class="hero-heading">
+          <h1>Vishnu M S</h1>
+          <p class="role">Infrastructure Engineer</p>
+        </div>
+        <img class="avatar" src="photo.jpg" alt="Vishnu M S" onerror="this.style.display='none'">
+      </div>
+      <p class="summary">
+        I keep enterprise infrastructure running — monitoring alerts against SLA priority, administering Windows Server and virtualization environments, and resolving issues before they become outages.
+      </p>
+
+      <div class="chip-row">
+        <span class="chip">SLA-driven incident response</span>
+        <span class="chip">Windows Server &amp; Active Directory</span>
+        <span class="chip">Multi-vendor RMM &amp; ticketing</span>
+        <span class="chip">Backup &amp; disaster recovery</span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="Vishnu_MS_Resume.pdf" download>Download resume (PDF)</a>
+        <a class="btn btn-secondary" href="mailto:vishnumsundar5@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/vishnumsundar" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="contact-row">
+        <a href="mailto:vishnumsundar5@gmail.com">vishnumsundar5@gmail.com</a>
+        <span>+91 79076 54546</span>
+        <span>Palakkad, India</span>
+      </div>
+    </header>
+
+    <div class="statgrid">
+      <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years in IT infrastructure</div></div>
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Tools &amp; platforms</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">SLA severity tiers managed</div></div>
+      <div class="stat"><div class="stat-num mono">MCSE</div><div class="stat-label">Certification</div></div>
+    </div>
+
+    <section id="highlights">
+      <h2>Highlights</h2>
+      <div class="highlight-grid">
+        <div class="highlight">
+          <span class="highlight-tag">CURRENT ROLE</span>
+          <p>Works NOC operations at Kaseya — the same vendor behind several of the RMM platforms he administers day to day.</p>
+        </div>
+        <div class="highlight">
+          <span class="highlight-tag">SCOPE</span>
+          <p>Handled Windows Server 2016/2019/2022 fleets, Active Directory, DNS, DHCP, and Group Policy across enterprise environments.</p>
+        </div>
+        <div class="highlight">
+          <span class="highlight-tag">CONTINUITY</span>
+          <p>Continuous IT operations track record since August 2023, moving from desktop support into NOC engineering.</p>
+        </div>
+        <div class="highlight">
+          <span class="highlight-tag">MULTI-SITE</span>
+          <p>Remotely ran IT operations across two Mahindra Holidays resort properties — network, firewalls, and device access control.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Core skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><div class="skill-cat">windows_server</div><div class="skill-val">Active Directory, Group Policy, DNS, DHCP</div></div>
+        <div class="skill-row"><div class="skill-cat">virtualization</div><div class="skill-val">VMware, Hyper-V</div></div>
+        <div class="skill-row"><div class="skill-cat">cloud</div><div class="skill-val">AWS, Azure (fundamentals)</div></div>
+        <div class="skill-row"><div class="skill-cat">rmm_tools</div><div class="skill-val">N-Central, NinjaOne, Datto, Kaseya, Atera, ConnectWise, Syncro</div></div>
+        <div class="skill-row"><div class="skill-cat">remote_support</div><div class="skill-val">TeamViewer, Splashtop, ScreenConnect, Ninja Remote</div></div>
+        <div class="skill-row"><div class="skill-cat">ticketing</div><div class="skill-val">Halo, Autotask, Salesforce, Freshdesk, ConnectWise Manage</div></div>
+        <div class="skill-row"><div class="skill-cat">network</div><div class="skill-val">Switches, access points, network troubleshooting</div></div>
+        <div class="skill-row"><div class="skill-cat">backup_dr</div><div class="skill-val">Veeam, Datto BCDR, Cove Data Protection</div></div>
+        <div class="skill-row"><div class="skill-cat">productivity</div><div class="skill-val">Microsoft 365 administration</div></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job current">
+        <div class="job-head">
+          <span class="job-title">Engineer — NOC Services</span>
+          <span class="job-date">Feb 2026 — Present</span>
+        </div>
+        <div class="job-org">Kaseya Software India Private Limited</div>
+        <ul>
+          <li>Monitor and manage infrastructure alerts by SLA priority — Critical, High, Medium, and Low severity incidents.</li>
+          <li>Troubleshoot system and endpoint issues: Group Policy failures, OS corruption, disk bad blocks, stopped services, and high CPU/memory alerts.</li>
+          <li>Perform first-line remediation and incident handling using RMM and monitoring tools.</li>
+          <li>Escalate unresolved issues to L2 teams or customers with full troubleshooting context.</li>
+          <li>Coordinate with internal teams and customers during critical incidents and outages.</li>
+          <li>Maintain ticket updates, work logs, and remediation notes for tracking and audit.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Associate NOC Engineer</span>
+          <span class="job-date">May 2024 — Feb 2026</span>
+        </div>
+        <div class="job-org">Worksent Technologies Pvt Ltd</div>
+        <ul>
+          <li>Managed Windows Server (2016/2019/2022), Active Directory, DNS, DHCP, and Group Policy.</li>
+          <li>Administered VMware and Hyper-V environments, including VMs and virtual networks.</li>
+          <li>Ran backups and disaster recovery tasks across client environments.</li>
+          <li>Monitored alerts across N-Central, Ninja, Datto, Kaseya VSA, Atera, and ConnectWise Automate.</li>
+          <li>Updated tickets and logs in Halo, Autotask, Salesforce, Freshdesk, and ConnectWise Manage.</li>
+          <li>Performed scheduled server reboots and escalated critical outages per SOP.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Desktop Support Engineer</span>
+          <span class="job-date">Aug 2023 — May 2024</span>
+        </div>
+        <div class="job-org">Randstad India Pvt Ltd</div>
+        <ul>
+          <li>Remotely managed IT operations for two Mahindra Holidays resorts.</li>
+          <li>Handled office and guest network management, access points, firewalls, and switches.</li>
+          <li>Managed Network Access Control and user device setups within the domain.</li>
+          <li>Coordinated with vendors on hardware issues and IT asset management.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Tools &amp; technologies</h2>
+      <div class="tags">
+        <span class="tag">Windows Server</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">VMware</span>
+        <span class="tag">Hyper-V</span>
+        <span class="tag">Veeam</span>
+        <span class="tag">Datto</span>
+        <span class="tag">Kaseya</span>
+        <span class="tag">N-Central</span>
+        <span class="tag">Atera</span>
+        <span class="tag">ConnectWise</span>
+        <span class="tag">TeamViewer</span>
+        <span class="tag">ScreenConnect</span>
+        <span class="tag">Microsoft 365</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Azure</span>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="two-col">
+        <div>
+          <h2>Certifications</h2>
+          <div class="cert-item">
+            <span class="cert-badge">MCSE</span>
+            <span>Training completed</span>
+          </div>
+        </div>
+        <div>
+          <h2>Education</h2>
+          <div class="edu-item">
+            <div class="edu-degree">B.Sc. Computer Science</div>
+            <div class="edu-school">University of Calicut</div>
+            <div class="edu-date">2019 — 2022</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Higher Secondary Education</div>
+            <div class="edu-school">CVMHSS, Vandazhy, Palakkad</div>
+            <div class="edu-date">2017 — 2019</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">High School</div>
+            <div class="edu-school">Mary Matha HSS, Panthalampadam</div>
+            <div class="edu-date">2017</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="cta-row center">
+        <a class="btn btn-primary" href="Vishnu_MS_Resume.pdf" download>Download resume (PDF)</a>
+        <a class="btn btn-secondary" href="mailto:vishnumsundar5@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/vishnumsundar" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+      <p class="foot-note mono">Palakkad, India</p>
+    </footer>
+  </div>
+
+</body>
+</html>
